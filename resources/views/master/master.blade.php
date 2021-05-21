@@ -18,6 +18,7 @@
     </head>
     <body id="page-top">
         @yield('content')
+        @include('sweetalert::alert')
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">

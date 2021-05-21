@@ -331,20 +331,23 @@
                 <div class="row">
                     <div class="col-xl-4 col-md-4">
                         <div class="text-center">
+                            <h5 class="text-white mb-4">Markas Genteng</h5>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.4598943172427!2d114.143994650333!3d-8.35633718648724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15563c88e13e5%3A0xcaca81fb9bb7f50e!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1618213528785!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <h6 class="text-white mt-4 mb-4">Jl. KH. Wahid Hasyim, Dusun Kopen, Genteng Kulon, Kec. Genteng, Kabupaten Banyuwangi, Jawa Timur 68465</h6>
+                            <h6 class="text-warning mt-4 mb-4">Jl. KH. Wahid Hasyim, Dusun Kopen, Genteng Kulon, Kec. Genteng, Kabupaten Banyuwangi, Jawa Timur 68465</h6>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4">
                         <div class="text-center">
+                            <h5 class="text-white mb-4">Markas Banyuwangi</h5>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.721870971966!2d114.34270345033161!3d-8.230698784878737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15b8859685e75%3A0x9371898cde674edc!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1618213725342!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <h6 class="text-white mt-4 mb-4">Kebalenan, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68417</h6>
+                            <h6 class="text-warning mt-4 mb-4">Kebalenan, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68417</h6>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4">
                         <div class="text-center">
+                            <h5 class="text-white mb-4">Markas Jember</h5>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.5235852409673!2d113.7094909503308!3d-8.149883683857656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695e3fc1b672f%3A0x2e6a0c860f943b8b!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1618213994693!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <h6 class="text-white mt-4 mb-4">Jl. DR. Soebandi No.99, Cangkring, Patrang, Kec. Patrang, Kabupaten Jember, Jawa Timur 68118</h6>
+                            <h6 class="text-warning mt-4 mb-4">Jl. DR. Soebandi No.99, Cangkring, Patrang, Kec. Patrang, Kabupaten Jember, Jawa Timur 68118</h6>
                         </div>
                     </div>
                 </div>
