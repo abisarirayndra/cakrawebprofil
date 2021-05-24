@@ -1,7 +1,7 @@
 @extends('master.konten')
 
 @section('title')
-<title>Tambah Slider Gambar</title>
+<title>Edit Deskripsi</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css"/>
 
 @endsection
@@ -18,17 +18,17 @@
                   <div class="col-lg-12">
                       <div class="p-5">
                           <div class="text-center">
-                              <h1 class="h4 text-gray-900 mb-4">Tambah Gambar</h1>
+                              <h1 class="h4 text-gray-900 mb-4">Edit Deskripsi</h1>
                           </div>
-                          <form method="POST" action="{{route('admin.upslider')}}" enctype="multipart/form-data">
+                          <form method="POST" action="{{route('admin.updatedeskripsi', [$deskripsi->id])}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                              <label for="soal">Gambar/Foto (Ukuran 1100 x 500 px)</label>
-                                <input type="file" class="form-control" name="gambar" required>
+                              <label for="deskripsi">Deskripsi</label>
+                                <textarea class="ckeditor" name="deskripsi" id="ckditor" cols="50" rows="10" required>{{$deskripsi->deskripsi}}</textarea>
                             </div>
                             <div class="form-group">
                               <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                Tambah
+                                Update
                               </button>
                             </div>
                           </form>
@@ -40,3 +40,6 @@
   </div>
 @endsection
 
+@section('js')
+        <script type="text/javascript" src="{{asset('back/vendor/ckeditor/ckeditor.js')}}"></script>
+@endsection

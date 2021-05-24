@@ -44,7 +44,7 @@
                     <span>Slider Gambar</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('admin.deskripsi')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Deskripsi Cakra</span></a>
             </li>

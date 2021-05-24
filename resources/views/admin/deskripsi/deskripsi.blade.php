@@ -1,7 +1,7 @@
 @extends('master.konten')
 
 @section('title')
-    <title>Admin - Slider</title>
+    <title>Admin - Deskripsi</title>
 
     <link href="{{asset('back/vendor/datatables/datatables.min.css')}}" rel="stylesheet">
 
@@ -64,51 +64,41 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Slider Gambar</h1>
-                    <p class="mb-4">Gambar yang berada dihalaman awal, menggambarkan profil cakra secara umum.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Deskripsi Cakra</h1>
+                    <p class="mb-4">Deskripsi yang menjelaskan bagaimana LKP Cakra secara umum</p>
 
-                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col-xl-6 col-md-6 col-sm-6 col-xs-12">
-                                    <h6 class="m-0 font-weight-bold text-primary">Data Slider Gambar</h6>
-                                </div>
-                                <div class="col-xl-6 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="{{route('admin.tambahslider')}}" class="btn btn-sm btn-primary float-right">Tambah Gambar</a>
+                        <!-- Card Header - Dropdown -->
+                        <div
+                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Deskripsi Cakra</h6>
+                            <div class="dropdown no-arrow">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                    aria-labelledby="dropdownMenuLink">
+                                    <div class="dropdown-header">Menu</div>
+                                    @if (isset($deskripsi))
+                                    <a class="dropdown-item" href="{{route('admin.editdeskripsi', [$deskripsi->id])}}">Edit</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{route('admin.hapusdeskripsi', [$deskripsi->id])}}" onclick="return confirm('Anda yakin ingin Menghapus ?')">Hapus</a>
+                                    @else
+                                    <a class="dropdown-item" href="{{route('admin.tambahdeskripsi')}}">Tambah</a>
+                                    <div class="dropdown-divider"></div>
+                                    @endif
+                                    
                                 </div>
                             </div>
                         </div>
+                        <!-- Card Body -->
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Gambar</th>
-                                            <th>Waktu Upload</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @php
-                                            $a = 1;
-                                        @endphp
-                                        @foreach ($list as $item)
-                                        <tr>
-                                            <td>{{$a++}}</td>
-                                            <td><img src="{{asset('/img/slider/'.$item->gambar)}}" alt="" width="200"></td>
-                                            <td>{{\Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y HH:mm')}}</td>
-                                            <td>
-                                                <a href="{{route('admin.editslider', [$item->id])}}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i>edit</a>
-                                                <a href="{{route('admin.hapusslider', [$item->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin ingin Menghapus ?')"><i class="fas fa-trash"></i>hapus</a>
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
+                            @if (isset($deskripsi))
+                                {!!$deskripsi->deskripsi!!}
+                            @else
+                                <p class="text-center">Dekripsi Belum Tersedia</p>
+                            @endif
                         </div>
                     </div>
 
