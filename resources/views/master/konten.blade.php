@@ -49,7 +49,7 @@
                     <span>Deskripsi Cakra</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('admin.dokumentasi')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dokumentasi</span></a>
             </li>
