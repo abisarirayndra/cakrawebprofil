@@ -13,8 +13,15 @@ class CreateAlumnisTable extends Migration
      */
     public function up()
     {
-        Schema::create('alumnis', function (Blueprint $table) {
-            $table->id();
+        Schema::create('wp_alumnis', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nama');
+            $table->string('foto');
+            $table->string('akademi');
+            $table->string('fb');
+            $table->string('twitter');
+            $table->string('ig');
+            $table->text('testi');
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ class CreateAlumnisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alumnis');
+        Schema::dropIfExists('wp_alumnis');
     }
 }

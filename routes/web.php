@@ -45,5 +45,12 @@ Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::post('/updatedokumentasi/{id}','KontenController@updateDokumentasi')->name('admin.updatedokumentasi');
     Route::get('/hapusdokumentasi/{id}','KontenController@destroyDokumentasi')->name('admin.hapusdokumentasi');
 
+    //Alumni
+    Route::get('/alumni','KontenController@alumni')->name('admin.alumni');
+    Route::get('/tambahalumni','KontenController@tambahAlumni')->name('admin.tambahalumni');
+    Route::post('/upalumni','KontenController@upAlumni')->name('admin.upalumni');
+    Route::get('/editalumni/{id}','KontenController@editAlumni')->name('admin.editalumni');
+    Route::post('/updatealumni/{id}','KontenController@updateAlumni')->name('admin.updatealumni');
+    Route::get('/hapusalumni/{id}','KontenController@destroyAlumni')->name('admin.hapusalumni');
 });
 

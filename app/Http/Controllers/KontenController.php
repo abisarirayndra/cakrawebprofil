@@ -10,6 +10,7 @@ use Image;
 use App\Deskripsi;
 use Illuminate\Support\Facades\Auth;
 use App\Dokumentasi;
+use App\Alumni;
 
 
 class KontenController extends Controller
@@ -169,5 +170,77 @@ class KontenController extends Controller
 
         Alert::toast('Hapus Dokumentasi Berhasil', 'success');
         return redirect()->route('admin.dokumentasi');
+    }
+
+    // Alumni
+    public function alumni(){
+        $alumni = Alumni::all();
+        $user = Auth::user()->nama;
+
+        return view('admin.alumni.alumni', compact('alumni','user'));
+    }
+
+    public function tambahAlumni(){
+        return view('admin.alumni.tambah');
+    }
+
+    public function upAlumni(Request $request){
+        $image = $request->file('foto');
+        $image_name = 'dok'.$image->getClientOriginalName().'.'.$request->file('foto')->extension();
+            $path = public_path('img/alumni/');
+            Alumni::create([
+                'nama' => ucwords($request->nama),
+                'foto' => $image_name,
+                'akademi' => $request->akademi,
+                'fb' => $request->fb,
+                'twitter' => $request->twitter,
+                'ig' => $request->ig,
+                'testi' => $request->testi,
+                
+            ]);
+            $image->move($path, $image_name);
+
+        Alert::toast('Tambah Data Berhasil','success');
+
+        return redirect()->route('admin.alumni');
+    }
+
+    public function editAlumni($id){
+        $alumni = Alumni::find($id);
+
+        return view('admin.alumni.edit',compact('alumni'));
+    }
+
+    public function updateAlumni($id,Request $request){
+        $alumni = Alumni::find($id);
+
+        $new_photo = $request->file('foto');
+
+        if($alumni->foto && file_exists(public_path('img/alumni/'. $alumni->foto))){
+            File::delete(public_path('img/alumni/'. $alumni->foto));
+        }
+        $images = 'alumnibaru'.$id.'.'.$request->file('foto')->extension();
+        Image::make($new_photo)->save(public_path('img/alumni/' . $images));
+        $alumni->update([
+            'nama' => ucwords($request->nama),
+            'foto' => $images,
+            'akademi' => $request->akademi,
+                'fb' => $request->fb,
+                'twitter' => $request->twitter,
+                'ig' => $request->ig,
+                'testi' => $request->testi,
+        ]);
+        
+        Alert::toast('Update Data Alumni Berhasil', 'success');
+        return redirect()->route('admin.alumni');
+    }
+
+    public function destroyAlumni($id){
+        $alumni = Alumni::find($id);
+        File::delete(public_path('img/alumni/'. $alumni->foto));
+        $alumni>delete();
+
+        Alert::toast('Hapus Data Alumni Berhasil', 'success');
+        return redirect()->route('admin.alumni');
     }
 }

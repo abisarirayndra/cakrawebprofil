@@ -1,26 +1,7 @@
 @extends('master.master')
 
 @section('content')
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container-fluid">
-                <a class="navbar-brand js-scroll-trigger" href="{{route('welcome')}}"><h6>Cakra Krisna Manggala</h6></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#demo">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://cat.cakrakrisnamanggala.com/public/login">CAT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">E-Learning</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
-                        {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
-                        {{-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> --}}
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
         <!-- Masthead-->
         <header class="head">
             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -30,6 +11,8 @@
                   <li data-target="#demo" data-slide-to="0" class="active"></li>
                   <li data-target="#demo" data-slide-to="1"></li>
                   <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+
                 </ul>
               
                 <!-- The slideshow -->
@@ -40,6 +23,9 @@
                   </div>
                   <div class="carousel-item">
                     <img src="{{asset('assets/img/001.jpg')}}" alt="Chicago" width="100%" height="100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{asset('assets/img/001.jpg')}}" alt="New York" width="100%" height="100%">
                   </div>
                   <div class="carousel-item">
                     <img src="{{asset('assets/img/001.jpg')}}" alt="New York" width="100%" height="100%">
@@ -257,7 +243,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Alumni - Alumni Berprestasi</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Lembaga terpercaya, terbukti dengan lulusan yang berprestasi</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
@@ -268,6 +254,7 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <p class="text-muted mt-3">Cakra Assesment Test (CAT) berdasarkan standar penilaian yang akurat. Program ini bersifat online dan bisa diakses kapanpun dan dimanampun.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -290,9 +277,6 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div>
             </div>
         </section>

@@ -54,7 +54,7 @@
                     <span>Dokumentasi</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('admin.alumni')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Alumni</span></a>
             </li>

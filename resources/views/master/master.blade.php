@@ -17,6 +17,27 @@
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container-fluid">
+                <a class="navbar-brand js-scroll-trigger" href="{{route('welcome')}}"><h6>Cakra Krisna Manggala</h6></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#demo">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://cat.cakrakrisnamanggala.com/public/login">CAT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Dokumentasi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Alumni</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
+                        {{-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> --}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
         @yield('content')
         @include('sweetalert::alert')
     <!-- Footer-->
