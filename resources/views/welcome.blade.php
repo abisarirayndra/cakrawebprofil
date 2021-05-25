@@ -180,7 +180,7 @@
                     <div class="col-md-4 col-xl-4">
                         <div class="card">
                             <div class="card-header text-center">
-                                <h5>Pratama</h5>
+                                <h5>Utama</h5>
                             </div>
                             <div class="card-body">
                                 <p>Layanan</p>
@@ -235,6 +235,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Muat lebih banyak <a href="{{route('dokumentasi')}}">dokumentasi kegiatan</a></p></div>
+                </div>
             </div>
         </section>
         
@@ -254,7 +257,7 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            <p class="text-muted mt-3">Cakra Assesment Test (CAT) berdasarkan standar penilaian yang akurat. Program ini bersifat online dan bisa diakses kapanpun dan dimanampun.</p>
+                            <p class="text-muted mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -265,6 +268,7 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <p class="text-muted mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -275,8 +279,12 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <p class="text-muted mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
                         </div>
                     </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Muat lebih banyak <a href="{{route('alumni')}}">Alumni Berprestasi</a></p></div>
                 </div>
             </div>
         </section>

@@ -17,4 +17,12 @@ class Controller extends BaseController
     public function kontak(){
         return view('kontak');
     }
+
+    public function dokumentasi(){
+        return view('dokumentasi');
+    }
+
+    public function alumni(){
+        return view('alumni');
+    }
 }

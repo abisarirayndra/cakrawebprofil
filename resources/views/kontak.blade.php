@@ -1,29 +1,8 @@
 @extends('master.master')
 
 @section('content')
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container-fluid">
-                <a class="navbar-brand js-scroll-trigger" href="{{route('welcome')}}"><h6>Cakra Krisna Manggala</h6></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{route('welcome')}}">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://cat.cakrakrisnamanggala.com/public/login">CAT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">E-Learning</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
-                        {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
-                        {{-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> --}}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
         <!-- Contact-->
-        <section class="page-section" id="contact">
+        <section class="page-section" style="height: 550px;" id="contact">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Hubungi Kami</h2>
@@ -32,16 +11,23 @@
                 <div class="row text-center">
                     <div class="col-md-12 text-center">
                         <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            <a href="https://wa.link/j04z3w" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                            </a>
+                            
                         </span>
                         <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            <a href="http://mailto:cakrakrisnamanggala@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </a>
                         </span>
                         <span class="fa-stack fa-2x">
+                            <a href="http://t.me/abisarirayndra" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fab fa-telegram-plane fa-stack-1x fa-inverse"></i>
+                            </a>
                         </span>
                     </div>
                 </div>

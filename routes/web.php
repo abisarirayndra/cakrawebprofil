@@ -21,6 +21,8 @@ Route::get('/admin','AuthController@tampilLogin')->name('admin');
 Route::post('/login','AuthController@login')->name('login');
 Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::get('/dokumentasi','Controller@dokumentasi')->name('dokumentasi');
+Route::get('/alumni','Controller@alumni')->name('alumni');
+
 
 Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::get('admin/slider','KontenController@slider')->name('admin.slider');
