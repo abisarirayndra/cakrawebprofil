@@ -25,4 +25,12 @@ class Controller extends BaseController
     public function alumni(){
         return view('alumni');
     }
+
+    public function info(){
+        return view('info');
+    }
+
+    public function artikel(){
+        return view('artikel');
+    }
 }

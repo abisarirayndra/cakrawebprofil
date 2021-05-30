@@ -17,11 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','Controller@landing')->name('welcome');
 Route::get('/kontak','Controller@kontak')->name('kontak');
 Route::get('/daftar','DaftarController@daftar')->name('daftar');
-Route::get('/admin','AuthController@tampilLogin')->name('admin');
-Route::post('/login','AuthController@login')->name('login');
-Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::get('/dokumentasi','Controller@dokumentasi')->name('dokumentasi');
 Route::get('/alumni','Controller@alumni')->name('alumni');
+Route::get('/info','Controller@info')->name('info');
+Route::get('/artikel','Controller@artikel')->name('artikel');
+
+Route::get('/login','AuthController@tampilLogin')->name('login');
+Route::post('/log','AuthController@login')->name('log');
+Route::get('/logout', 'AuthController@logout')->name('logout');
+Route::get('/register','DaftarController@register')->name('register');
+Route::post('/reg','DaftarController@reg')->name('reg');
+Route::get('/masuk','DaftarController@masuk')->name('masuk');
+Route::post('/upmasuk','DaftarController@upMasuk')->name('upmasuk');
+
 
 
 Route::group(['middleware' => ['auth','admin-role']], function(){
@@ -55,5 +63,18 @@ Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::get('admin/editalumni/{id}','KontenController@editAlumni')->name('admin.editalumni');
     Route::post('admin/updatealumni/{id}','KontenController@updateAlumni')->name('admin.updatealumni');
     Route::get('admin/hapusalumni/{id}','KontenController@destroyAlumni')->name('admin.hapusalumni');
+
+    //Alumni
+    Route::get('admin/info','KontenController@info')->name('admin.info');
+    Route::get('admin/tambahinfo','KontenController@tambahInfo')->name('admin.tambahinfo');
+    Route::post('admin/upinfo','KontenController@upInfo')->name('admin.upinfo');
+    Route::get('admin/editinfo/{id}','KontenController@editInfo')->name('admin.editinfo');
+    Route::post('admin/updateinfo/{id}','KontenController@updateInfo')->name('admin.updateinfo');
+    // Route::get('admin/hapusalumni/{id}','KontenController@destroyAlumni')->name('admin.hapusalumni');
 });
+
+Route::group(['middleware' => ['auth','pendaftar-role']], function(){
+    Route::get('/pendaftar/profil','PendaftarController@profil')->name('pendaftar.profil');
+});
+
 

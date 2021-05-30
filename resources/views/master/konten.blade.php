@@ -59,7 +59,7 @@
                     <span>Alumni</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('admin.info')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Info</span></a>
             </li>

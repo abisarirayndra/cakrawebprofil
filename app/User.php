@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nama', 'email', 'password','role_id',
     ];
 
     /**
@@ -39,6 +39,13 @@ class User extends Authenticatable
 
     public function isAdmin(){
         if($this->role_id == 2){
+            return true;
+        }
+        return false;
+    }
+
+    public function isPendaftar(){
+        if($this->role_id == 5){
             return true;
         }
         return false;

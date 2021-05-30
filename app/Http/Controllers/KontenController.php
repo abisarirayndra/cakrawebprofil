@@ -11,6 +11,7 @@ use App\Deskripsi;
 use Illuminate\Support\Facades\Auth;
 use App\Dokumentasi;
 use App\Alumni;
+use App\Artikel;
 
 
 class KontenController extends Controller
@@ -238,9 +239,75 @@ class KontenController extends Controller
     public function destroyAlumni($id){
         $alumni = Alumni::find($id);
         File::delete(public_path('img/alumni/'. $alumni->foto));
-        $alumni>delete();
+        $alumni->delete();
 
         Alert::toast('Hapus Data Alumni Berhasil', 'success');
         return redirect()->route('admin.alumni');
+    }
+
+    // Info
+    public function info(){
+        $user = Auth::user()->nama;
+        $info = Artikel::all();
+        return view('admin.info.info', compact('info','user'));
+    }
+
+    public function tambahInfo(){
+        return view('admin.info.tambah');
+    }
+
+    public function upInfo(Request $request){
+        $penulis = Auth::user()->id;
+        $image = $request->file('foto');
+        $image_name = 'info'.$image->getClientOriginalName().'.'.$request->file('foto')->extension();
+            $path = public_path('img/artikel/');
+            Artikel::create([
+                'judul' => ucwords($request->judul),
+                'foto' => $image_name,
+                'artikel' => $request->artikel,
+                'penulis' => $penulis,
+                
+            ]);
+            $image->move($path, $image_name);
+
+        Alert::toast('Tambah Artikel Berhasil','success');
+
+        return redirect()->route('admin.info');
+    }
+
+    public function editInfo($id){
+        $info = Artikel::find($id);
+        return view('admin.info.edit', compact('info'));
+    }
+
+    public function updateInfo($id,Request $request){
+        $info = Artikel::find($id);
+        $penulis = Auth::user()->id;
+
+        $new_photo = $request->file('foto');
+
+        if($info->foto && file_exists(public_path('img/artikel/'. $info->foto))){
+            File::delete(public_path('img/artikel/'. $info->foto));
+        }
+        $images = 'infobaru'.$id.'.'.$request->file('foto')->extension();
+        Image::make($new_photo)->save(public_path('img/artikel/' . $images));
+        $info->update([
+            'judul' => ucwords($request->judul),
+                'foto' => $images,
+                'artikel' => $request->artikel,
+                'penulis' => $penulis,
+        ]);
+        
+        Alert::toast('Update Info Berhasil', 'success');
+        return redirect()->route('admin.info');
+    }
+
+    public function destroyInfo($id){
+        $info = Artikel::find($id);
+        File::delete(public_path('img/artikel/'. $info->foto));
+        $info->delete();
+
+        Alert::toast('Hapus Info Berhasil', 'success');
+        return redirect()->route('admin.info');
     }
 }
