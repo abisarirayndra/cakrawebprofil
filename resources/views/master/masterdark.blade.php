@@ -28,12 +28,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('welcome')}}">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://cat.cakrakrisnamanggala.com/public/login">CAT</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('dokumentasi')}}">Dokumentasi</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('alumni')}}">Alumni</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('info')}}">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('masuk')}}">Pendaftaran</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
-                        {{-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> --}}
                     </ul>
                 </div>
             </div>

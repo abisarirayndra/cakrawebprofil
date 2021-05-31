@@ -27,16 +27,17 @@ class AuthController extends Controller
                 Alert::toast('Selamat datang Admin','success');
                 return redirect()->route('admin.slider');
             }
+            
 
         }
         Alert::error('Akses tidak diizinkan','Gagal');
-        return redirect('admin');
+        return redirect('login');
     }
 
     public function logout()
     {
         Auth::logout();
         Alert::success('Kamu berhasil keluar', 'Selamat tinggal!');
-        return redirect()->route('admin');
+        return redirect()->route('welcome');
     }
 }

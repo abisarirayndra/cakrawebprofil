@@ -50,8 +50,7 @@
                         <div class="text-center"><img src="{{asset('assets/img/logos/krisna.png')}}" alt="Krisna" width="200" height="200"></div>
                     </div>
                     <div class="col-xl-8">
-                        <p class="pt-2 pl-4" style="font-size: 16pt"> Efektif dan Atraktif adalah metode pembelajaran di Cakra Krisna Manggala.
-                            Dengan metode asrama selama 2 bulan full kegiatan akan secara efektif untuk pembelajaran dan pelatihan anak-anak untuk persiapan masuk TNI-Polri dan Sekolah Kedinasan.
+                        <p class="pt-2 pl-4 text-justify" style="font-size: 14pt"> CAKRA KRISNA MANGGALA yang artinya Pemimipin yang Kuat, Cerdas dan Bijaksana dikandung maksud bagi yang mengikuti Lembaga Kursus dan Pelatihan (LKP) CAKRA KRISNA MANGGALA walaupun pintar dan kuat tetapi tetap memiliki sikap dan budipekerti santun, rendah hati sehingga bisa memiliki karakter kepribadian yang bak dan bijaksana. Lembaga Bimbingan dan Pelatihan CAKRA KRISNA yang di mulai pada tanggal 19 September 2019 kami dirikan karena keterpanggilan kami dalam mempersiapkan pemuda-pemudi yang berpotensi untuk jadi TNI-POLRI dan Sekolah Kedinasan. LKP CAKRA KRISNA MANGGALA sudah legal didukung dengan SK Menkumham no. AHU-0005302.AH.01.07 Tahun 2020 serta Akte Notaris Fani Yulistianto Setiabudi, S.H, M.M, MKn. Nomer 01 Tanggal 03 Juni 2020.
                         </p>
                     </div>
                 </div>
@@ -139,7 +138,7 @@
             </div>
         </section>
         {{-- Paket --}}
-        <section class="page-section bg-dark" id="paket">
+        {{-- <section class="page-section bg-dark" id="paket">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-heading text-uppercase" style="color: var(--warning)">Paket Pembelajaran</h2>
@@ -195,9 +194,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        {{-- <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Dokumentasi Kegiatan</h2>
@@ -287,7 +286,7 @@
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Muat lebih banyak <a href="{{route('alumni')}}">Alumni Berprestasi</a></p></div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Clients-->
         <div class="py-5">
             <div class="container">

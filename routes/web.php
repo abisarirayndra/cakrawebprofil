@@ -26,7 +26,7 @@ Route::get('/login','AuthController@tampilLogin')->name('login');
 Route::post('/log','AuthController@login')->name('log');
 Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::get('/register','DaftarController@register')->name('register');
-Route::post('/reg','DaftarController@reg')->name('reg');
+Route::post('/reg','DaftarController@reg')->middleware('guest')->name('reg');
 Route::get('/masuk','DaftarController@masuk')->name('masuk');
 Route::post('/upmasuk','DaftarController@upMasuk')->name('upmasuk');
 
@@ -37,8 +37,8 @@ Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::get('admin/tambahslider','KontenController@tambahSlider')->name('admin.tambahslider');
     Route::post('admin/upslider','KontenController@upSlider')->name('admin.upslider');
     Route::get('admin/editslider/{id}','KontenController@editSlider')->name('admin.editslider');
-    Route::post('/updateslider/{id}','KontenController@updateSlider')->name('admin.updateslider');
-    Route::get('/hapusslider/{id}','KontenController@destroySlider')->name('admin.hapusslider');
+    Route::post('admin/updateslider/{id}','KontenController@updateSlider')->name('admin.updateslider');
+    Route::get('admin/hapusslider/{id}','KontenController@destroySlider')->name('admin.hapusslider');
 
     // Deskripsi
     Route::get('admin/deskripsi','KontenController@deskripsi')->name('admin.deskripsi');
@@ -70,11 +70,16 @@ Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::post('admin/upinfo','KontenController@upInfo')->name('admin.upinfo');
     Route::get('admin/editinfo/{id}','KontenController@editInfo')->name('admin.editinfo');
     Route::post('admin/updateinfo/{id}','KontenController@updateInfo')->name('admin.updateinfo');
-    // Route::get('admin/hapusalumni/{id}','KontenController@destroyAlumni')->name('admin.hapusalumni');
+    Route::get('admin/hapusinfo/{id}','KontenController@destroyInfo')->name('admin.hapusinfo');
 });
 
 Route::group(['middleware' => ['auth','pendaftar-role']], function(){
-    Route::get('/pendaftar/profil','PendaftarController@profil')->name('pendaftar.profil');
+    Route::get('pendaftar/profil','PendaftarController@profil')->name('pendaftar.profil');
+    Route::post('pendaftar/upformulir','PendaftarController@upFormulir')->name('pendaftar.upformulir');
+    Route::get('pendaftar/cetak/{id}','PendaftarController@cetak')->name('pendaftar.cetak');
+    Route::get('pendaftar/cetak_pdf/{id}','PendaftarController@cetak_pdf')->name('pendaftar.cetak_pdf');
+    Route::get('pendaftar/edit/{id}','PendaftarController@edit')->name('pendaftar.edit');
+    Route::post('pendaftar/update/{id}','PendaftarController@update')->name('pendaftar.update');
+    
 });
-
 
