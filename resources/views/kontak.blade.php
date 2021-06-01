@@ -18,12 +18,6 @@
                             
                         </span>
                         <span class="fa-stack fa-2x">
-                            <a href="http://mailto:cakrakrisnamanggala@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-2x">
                             <a href="http://t.me/abisarirayndra" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fab fa-telegram-plane fa-stack-1x fa-inverse"></i>

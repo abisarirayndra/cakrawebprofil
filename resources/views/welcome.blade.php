@@ -21,15 +21,11 @@
                   <div class="carousel-item active">
                     <img src="{{asset('assets/img/001.jpg')}}" alt="Los Angeles" width="100%" height="100%">
                   </div>
+                  @foreach ($slider as $item)
                   <div class="carousel-item">
-                    <img src="{{asset('assets/img/001.jpg')}}" alt="Chicago" width="100%" height="100%">
+                    <img src="{{asset('img/slider/'. $item->gambar)}}" width="100%" height="100%">
                   </div>
-                  <div class="carousel-item">
-                    <img src="{{asset('assets/img/001.jpg')}}" alt="New York" width="100%" height="100%">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{{asset('assets/img/001.jpg')}}" alt="New York" width="100%" height="100%">
-                  </div>
+                  @endforeach
                 </div>
               
                 <!-- Left and right controls -->
@@ -69,24 +65,24 @@
                     </div>
                     <div class="col-xl-6">
                         <div class="row text-center">
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                                 <img src="{{asset('assets/img/logos/asrama.png')}}" alt="" width="200" height="200">
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                                 <img src="{{asset('assets/img/logos/akademik.png')}}" alt="" width="200" height="200">
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                                 <img src="{{asset('assets/img/logos/kesehatan.png')}}" alt="" width="200" height="200">
                             </div>
                         </div>
                         <div class="row text-center">
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                                 <img src="{{asset('assets/img/logos/jasmani.png')}}" alt="" width="200" height="200">
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                                 <img src="{{asset('assets/img/logos/psikologi.png')}}" alt="" width="200" height="200">
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-4 col-md-6">
                             </div>
                         </div>
                     </div>
@@ -291,23 +287,41 @@
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2 col-sm-3 my-2">
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
                         <a href="#!"><img class="img-fluid d-block mx-auto" title="TNI AU" src="{{asset('assets/img/logos/au.png')}}" width="70" alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-2">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" title="TNI AL" src="{{asset('assets/img/logos/al.png')}}" width="70" alt="" /></a>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="TNI AL" src="{{asset('assets/img/logos/al.png')}}" width="50" alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-2">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" title="TNI AD" src="{{asset('assets/img/logos/ad.png')}}" width="70" alt="" /></a>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="TNI AD" src="{{asset('assets/img/logos/ad.png')}}" width="50" alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-2">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" title="AKPOL" src="{{asset('assets/img/logos/akpol.png')}}" width="70" alt="" /></a>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="AKPOL" src="{{asset('assets/img/logos/akpol.png')}}" width="50" alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-2">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" title="AKMIL" src="{{asset('assets/img/logos/akmil.png')}}" width="70" alt="" /></a>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="AKMIL" src="{{asset('assets/img/logos/akmil.png')}}" width="50" alt="" /></a>
                     </div>
-                    <div class="col-md-2 col-sm-6 my-2">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" title="Polisi" src="{{asset('assets/img/logos/polisi.png')}}" width="70" alt="" /></a>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="Polisi" src="{{asset('assets/img/logos/polisi.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="Polstat-STIS" src="{{asset('assets/img/logos/polstat-stis.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="IPDN" src="{{asset('assets/img/logos/ipdn.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="STMKG" src="{{asset('assets/img/logos/stmkg.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="Poltekip" src="{{asset('assets/img/logos/poltekip.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="Poltekim" src="{{asset('assets/img/logos/poltekim.png')}}" width="50" alt="" /></a>
+                    </div>
+                    <div class="col-xl-1 col-md-1 col-sm-6 col-xs-6 my-2">
+                        <a href="#!"><img class="img-fluid d-block mx-auto" title="PKN-STAN" src="{{asset('assets/img/logos/pkn-stan.png')}}" width="50" alt="" /></a>
                     </div>
                 </div>
             </div>

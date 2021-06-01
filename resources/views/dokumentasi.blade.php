@@ -8,36 +8,22 @@
                     <h3 class="section-subheading text-white">Galeri kegiatan yang sudah dilalui</h3>
                 </div>
                 <div class="row">
+                    @foreach ($dok as $item)
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/002.jpg')}}" alt="" />
+                            <a class="portfolio-link">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">{{$item->keterangan}}</div>
+                                </div>
+                                <img class="img-fluid" src="{{asset('img/dok/'. $item->foto)}}" alt="" />
+                            </a>
+                            {{-- <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Threads</div>
+                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                            </div> --}}
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/003.jpg')}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/004.jpg')}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/005.jpg')}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/006.jpg')}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="portfolio-item">
-                                <img class="img-fluid" src="{{asset('assets/img/007.jpg')}}" alt="" />
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 </div>
         </section>

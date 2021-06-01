@@ -8,39 +8,19 @@
                     <h3 class="section-subheading text-white">Lembaga terpercaya, terbukti dengan lulusan yang berprestasi</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    @foreach ($alumni as $item)
+                    <div class="col-lg-4 col-md-6">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{asset('assets/img/team/1.jpg')}}" alt="" />
-                            <h4 class="text-warning">Kay Garland</h4>
-                            <p class="text-white">Lead Designer</p>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <img class="mx-auto rounded-circle" src="{{asset('img/alumni/'. $item->foto)}}" alt="" />
+                            <h4 class="text-warning">{{$item->nama}}</h4>
+                            <p class="text-white">{{$item->akademi}}</p>
+                            {{-- <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            <p class="text-white mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
+                            <p class="text-white mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p> --}}
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{asset('assets/img/team/2.jpg')}}" alt="" />
-                            <h4 class="text-warning">Larry Parker</h4>
-                            <p class="text-white">Lead Marketer</p>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            <p class="text-white mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{asset('assets/img/team/3.jpg')}}" alt="" />
-                            <h4 class="text-warning">Diana Petersen</h4>
-                            <p class="text-white">Lead Developer</p>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            <p class="text-white mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 
             </div>

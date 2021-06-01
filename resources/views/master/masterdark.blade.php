@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('dokumentasi')}}">Dokumentasi</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('alumni')}}">Alumni</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('info')}}">Info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('masuk')}}">Pendaftaran</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('petunjuk')}}">Pendaftaran</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
                     </ul>
                 </div>
@@ -43,15 +43,11 @@
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-left">Copyright © Cakra Krisna Manggala 2021</div>
-                <div class="col-lg-4 my-3 my-lg-0">
+                <div class="col-lg-6 text-lg-left">Copyright © Cakra Krisna Manggala {{\Carbon\Carbon::now()->isoFormat('Y')}}</div>
+                <div class="col-lg-6 text-lg-right">
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col-lg-4 text-lg-right">
-                    <a class="mr-3" href="#!">Privacy Policy</a>
-                    <a href="#!">Terms of Use</a>
                 </div>
             </div>
         </div>

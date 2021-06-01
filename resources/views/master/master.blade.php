@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('dokumentasi')}}">Dokumentasi</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('alumni')}}">Alumni</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('info')}}">Info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('masuk')}}">Pendaftaran</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('petunjuk')}}">Pendaftaran</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
                     </ul>
                 </div>
@@ -43,15 +43,12 @@
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-left">Copyright © Cakra Krisna Manggala 2021</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col-lg-4 text-lg-right">
-                    <a class="mr-3" href="#!">Privacy Policy</a>
-                    <a href="#!">Terms of Use</a>
+                <div class="col-lg-6 text-lg-left">Copyright © Cakra Krisna Manggala {{\Carbon\Carbon::now()->isoFormat('Y')}}</div>
+                <div class="col-lg-6 text-lg-right">
+                    <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/cakrakrisnamanggala?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/cakrakrisna.manggala.7" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://vt.tiktok.com/ZSJuy6HjK/" target="_blank"><i class="fab fa-tiktok"></i></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="" title="cakrakrisnamanggala@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>

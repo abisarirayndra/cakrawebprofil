@@ -6,31 +6,44 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use App\Slider;
+use App\Dokumentasi;
+use App\Alumni;
+use App\Artikel;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function landing(){
-        return view('welcome');
+        $slider = Slider::all();
+        return view('welcome', compact('slider'));
     }
     public function kontak(){
         return view('kontak');
     }
 
     public function dokumentasi(){
-        return view('dokumentasi');
+        $dok = Dokumentasi::all();
+        return view('dokumentasi', compact('dok'));
     }
 
     public function alumni(){
-        return view('alumni');
+        $alumni = Alumni::all();
+        return view('alumni', compact('alumni'));
     }
 
     public function info(){
-        return view('info');
+        $artikel = Artikel::all();
+        return view('info', compact('artikel'));
     }
 
-    public function artikel(){
-        return view('artikel');
+    public function artikel($id){
+        $artikel = Artikel::find($id);
+        return view('artikel', compact('artikel'));
+    }
+
+    public function petunjuk(){
+        return view('auth.petunjuk');
     }
 }
