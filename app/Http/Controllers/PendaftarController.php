@@ -127,4 +127,6 @@ class PendaftarController extends Controller
 
         return redirect()->route('pendaftar.cetak', $id);
     }
+
+    
 }

@@ -20,7 +20,7 @@ Route::get('/daftar','DaftarController@daftar')->name('daftar');
 Route::get('/dokumentasi','Controller@dokumentasi')->name('dokumentasi');
 Route::get('/alumni','Controller@alumni')->name('alumni');
 Route::get('/info','Controller@info')->name('info');
-Route::get('/artikel','Controller@artikel')->name('artikel');
+Route::get('/artikel/{id}','Controller@artikel')->name('artikel');
 
 Route::get('/login','AuthController@tampilLogin')->name('login');
 Route::post('/log','AuthController@login')->name('log');
@@ -29,6 +29,8 @@ Route::get('/register','DaftarController@register')->name('register');
 Route::post('/reg','DaftarController@reg')->middleware('guest')->name('reg');
 Route::get('/masuk','DaftarController@masuk')->name('masuk');
 Route::post('/upmasuk','DaftarController@upMasuk')->name('upmasuk');
+Route::get('/petunjuk','Controller@petunjuk')->name('petunjuk');
+
 
 
 
@@ -80,6 +82,5 @@ Route::group(['middleware' => ['auth','pendaftar-role']], function(){
     Route::get('pendaftar/cetak_pdf/{id}','PendaftarController@cetak_pdf')->name('pendaftar.cetak_pdf');
     Route::get('pendaftar/edit/{id}','PendaftarController@edit')->name('pendaftar.edit');
     Route::post('pendaftar/update/{id}','PendaftarController@update')->name('pendaftar.update');
-    
 });
 

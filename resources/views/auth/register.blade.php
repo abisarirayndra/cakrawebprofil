@@ -56,6 +56,7 @@
 
                                     </div>
                                 </div>
+                                <a href="{{route('petunjuk')}}" class="btn btn-danger">Kembali</a>
                                 <button id="button" class="btn btn-warning" type="submit" disabled>Register</button>
                             </form>
                             <hr>
