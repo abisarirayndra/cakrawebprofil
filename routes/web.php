@@ -26,11 +26,12 @@ Route::get('/login','AuthController@tampilLogin')->name('login');
 Route::post('/log','AuthController@login')->name('log');
 Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::get('/register','DaftarController@register')->name('register');
-Route::post('/reg','DaftarController@reg')->middleware('guest')->name('reg');
+Route::post('/reg','DaftarController@reg')->name('reg');
 Route::get('/masuk','DaftarController@masuk')->name('masuk');
 Route::post('/upmasuk','DaftarController@upMasuk')->name('upmasuk');
 Route::get('/petunjuk','Controller@petunjuk')->name('petunjuk');
-
+Route::get('/lupa-password','DaftarController@lupaPass')->name('lupa-password');
+Route::post('/reset','DaftarController@reset')->name('reset');
 
 
 

@@ -15,7 +15,6 @@ class DaftarController extends Controller
     }
 
     public function reg(Request $request){
-        // return $request;
         $email = $request->email;
         $nama = $request->nama;
         $sudah_email = User::where('email', $email)->first();
@@ -31,9 +30,21 @@ class DaftarController extends Controller
                 'password' => Hash::make($request->password),
                 'role_id' => 5,
             ]);
-    
-        Alert::success('Registrasi Berhasil');
-        return redirect()->route('masuk');
+
+            $credentials = [
+                'email' => $request->email,
+                'password' => $request->password,
+            ];
+
+            if(Auth::attempt($credentials)){
+                if(auth()->user()->role_id == 5){
+                    Alert::toast('Selamat Datang Pendaftar','success');
+                    return redirect()->route('pendaftar.profil');
+                }
+
+            }
+            Alert::error('Akses tidak diizinkan','Gagal');
+            return redirect('masuk');
         }
     }
 
@@ -62,7 +73,23 @@ class DaftarController extends Controller
         return redirect('masuk');
     }
 
-    
+    public function lupaPass(){
+        return view('auth.reset');
+    }
+
+    public function reset(Request $request){
+        $user = User::where('email', $request->email)->first();
+        if($user){
+            $user->update([
+                'password' => Hash::make($request->password),
+            ]);
+
+            Alert::toast('Update Passeword Berhasil','success');
+            return redirect()->route('masuk');
+        }
+        Alert::error('Akun Tidak Ditemukan','Gagal');
+        return redirect('masuk');
+    }
 
 
 }

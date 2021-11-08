@@ -42,11 +42,14 @@
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
-  
+
             <div class="col-xl-8 col-lg-8 col-md-7">
-  
+
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
+                        <div class="text-right pt-3 pr-3">
+                            <a href="{{route('welcome')}}" class="btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
+                        </div>
                         <div class="text-center mt-4">
                             <img src="{{asset('assets/img/favicon.ico')}}" width="50" alt="">
 
@@ -64,16 +67,18 @@
                             <li>Melakukan tahap administrasi selanjutnya di markas Cakra Krisna Manggala</li>
                         </ul>
                         <div class="text-center mb-4 mt-4">
-                            <a href="{{route('welcome')}}" class="btn btn-danger">Kembali Ke Beranda</a>
-                            <a href="{{route('register')}}" class="btn btn-warning">Registrasi Email</a>
+                            <a href="{{route('register')}}" class="btn btn-sm btn-warning">Registrasi Email</a>
+                            <hr>
+                            <h6>Sudah Pernah Mendaftar ?</h6>
+                            <a href="{{ route('masuk') }}" class="btn btn-sm btn-success">Ya, Login</a>
                         </div>
                     </div>
                 </div>
-  
+
             </div>
-  
+
         </div>
-  
+
     </div>
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('back/vendor/jquery/jquery.min.js')}}"></script>

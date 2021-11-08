@@ -21,51 +21,71 @@
                 <form class="user" class="" action="{{route('pendaftar.update', [$data->id])}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
-                        <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control form-control-user" id="exampleFirstName"
                                 placeholder="Nama Lengkap" name="nama" value="{{$user}}" readonly>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="tempat">Tempat Lahir</label>
-                            <input type="text" value="{{$data->tempat_lahir}}" autofocus class="form-control form-control-user" name="tempat_lahir" placeholder="Tempat Lahir" required>
+                            <input type="text" autofocus class="form-control form-control-user" name="tempat_lahir" value="{{$data->tempat_lahir}}" placeholder="Tempat Lahir" required>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <label for="tanggal">Tanggal Lahir</label>
-                            <input type="date" class="form-control form-control-user" name="tanggal_lahir" value="{{$data->tanggal_lahir}}">
+                            <input type="date" class="form-control form-control-user" name="tanggal_lahir" value="{{$data->tanggal_lahir}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <label for="nik">Nomor Induk Kependudukan</label>
+                            <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                placeholder="Nama Lengkap" name="nik" value="{{$data->nik}}" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="nisn">Nomor Induk Siswa Nasional (NISN)</label>
+                            <input type="text" autofocus class="form-control form-control-user" name="nisn" placeholder="NISN" value="{{$data->nisn}}" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="tanggal">Nama Ibu Kandung</label>
+                            <input type="text" class="form-control form-control-user" name="ibu" placeholder="Nama Ibu Kandung" value="{{$data->ibu}}" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4 mb-3 mb-sm-0">
                             <label for="alamat">Alamat</label>
-                                <input type="text" value="{{$data->alamat}}" class="form-control form-control-user" id="alamat"
-                                    placeholder="Alamat" name="alamat" required>
+                                <input type="text" class="form-control form-control-user" id="alamat"
+                                    placeholder="Alamat" name="alamat" value="{{$data->alamat}}" required>
                         </div>
                         <div class="col-sm-4">
                             <label for="sekolah">Asal Sekolah</label>
-                            <input type="text" value="{{$data->sekolah}}" class="form-control form-control-user" id="sekolah"
-                                placeholder="Asal Sekolah" name="sekolah" required>
+                            <input type="text" class="form-control form-control-user" id="sekolah"
+                                placeholder="Asal Sekolah" name="sekolah" value="{{$data->sekolah}}" required>
                         </div>
                         <div class="col-sm-4">
-                            <label for="wali">Nama Wali</label>
-                            <input type="text" value="{{$data->wali}}" class="form-control form-control-user" name="wali" placeholder="Nama Wali" required>
+                            <label for="wa">No. Telepon/WhatsApp</label>
+                            <input type="number" class="form-control form-control-user" name="wa" value="{{$data->wa}}" placeholder="Nomor Telepon/Whatsapp" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4 mb-3 mb-sm-0">
-                            <label for="wa">No. Telpon/WhatsApp</label>
-                            <input type="text" value="{{$data->wa}}" class="form-control form-control-user" name="wa" placeholder="Tempat Lahir" required>
+                            <label for="wali">Nama Wali</label>
+                            <input type="text" class="form-control form-control-user" name="wali" value="{{$data->wali}}" placeholder="Nama Wali" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="wa-wali">No. Telepon/Whatsapp Wali</label>
+                            <input type="number" class="form-control form-control-user" name="wa_wali" value="{{$data->wa_wali}}" placeholder="Nomor Telepon/Whatsapp Wali" required>
                         </div>
                         <div class="col-sm-4">
                             <label for="markas">Markas Yang Dituju</label>
-                            <select name="markas" class="form-control">
-                                <option>--Pilih Salah Satu--</option>
+                            <select name="markas" class="form-control form-control-user" required>
                                 <option value="Genteng" @if($data->markas == "Genteng") {{'selected="selected"'}} @endif>Genteng</option>
                                 <option value="Banyuwangi" @if($data->markas == "Banyuwangi") {{'selected="selected"'}} @endif>Banyuwangi</option>
                                 <option value="Jember" @if($data->markas == "Jember") {{'selected="selected"'}} @endif>Jember</option>
                             </select>
                         </div>
-                        <div class="col-sm-4">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
                             <img src="{{asset('img/pendaftar/'. $data->foto)}}" width="50" alt="" class="m-3">
                             <label for="foto">Foto Diri (3x4) <div class="text-danger">Maksimal 500 Kb</div> </label>
                                 <input type="file" id="foto"
@@ -114,7 +134,7 @@
 @section('js')
 <script type="text/javascript" src="{{asset('back/vendor/ckeditor/ckeditor.js')}}"></script>
 
-   
+
 @endsection
 
 

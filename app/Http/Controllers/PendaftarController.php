@@ -44,8 +44,12 @@ class PendaftarController extends Controller
             'sekolah' => $request->sekolah,
             'wa' => $request->wa,
             'wali' => $request->wali,
+            'wa_wali' => $request->wa_wali,
             'foto' => $image_name,
             'markas' => $request->markas,
+            'nik' => $request->nik,
+            'nisn' => $request->nisn,
+            'ibu' =>  $request->ibu,
         ]);
 
         $image->move($path, $image_name);
@@ -72,7 +76,7 @@ class PendaftarController extends Controller
         $en_logo = (string) Image::make(public_path('img/krisna.png'))->encode('data-url');
         // return $en_foto;
         $pdf = PDF::loadview('pendaftar.review', ['data' => $pendaftar, 'user' => $user,'foto' => $en_foto, 'logo' => $en_logo])->setPaper('a4');
-        return $pdf->download('Bukti Pendaftaran.pdf');
+        return $pdf->stream();
     }
 
     public function edit($id){
@@ -107,26 +111,34 @@ class PendaftarController extends Controller
                 'sekolah' => $request->sekolah,
                 'wa' => $request->wa,
                 'wali' => $request->wali,
+                'wa_wali' => $request->wa_wali,
                 'foto' => $images,
                 'markas' => $request->markas,
+                'nik' => $request->nik,
+                'nisn' => $request->nisn,
+                'ibu' =>  $request->ibu,
             ]);
 
         }
 
-        
+
         $data->update([
             'pendaftar' => $user,
-            'tempat_lahir' => $request->tempat_lahir,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'alamat' => $request->alamat,
-            'sekolah' => $request->sekolah,
-            'wa' => $request->wa,
-            'wali' => $request->wali,
-            'markas' => $request->markas,
+                'tempat_lahir' => $request->tempat_lahir,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'alamat' => $request->alamat,
+                'sekolah' => $request->sekolah,
+                'wa' => $request->wa,
+                'wali' => $request->wali,
+                'wa_wali' => $request->wa_wali,
+                'markas' => $request->markas,
+                'nik' => $request->nik,
+                'nisn' => $request->nisn,
+                'ibu' =>  $request->ibu,
         ]);
 
         return redirect()->route('pendaftar.cetak', $id);
     }
 
-    
+
 }

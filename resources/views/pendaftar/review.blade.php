@@ -10,13 +10,13 @@
 
 <body>
     <div class="container">
-    
+
             <center>
                 <img src="{!!$logo!!}" width="80" alt="">
                 <h5>Cakra Krisna Manggala</h5>
                 <h6 class="mb-5">Data Pendaftar Cakra Krisna Manggala</h6>
             </center>
-    
+
                         <div class="row">
                             <center>
                                 <img src="{!!$foto!!}" width="100" alt="">
@@ -33,6 +33,18 @@
                                         <td class="pl-4">{{$data->tempat_lahir}}, {{\Carbon\Carbon::parse($data->tanggal_lahir)->isoFormat('D MMMM Y')}}</td>
                                     </tr>
                                     <tr>
+                                        <td><b>NIK</b></td>
+                                        <td class="pl-4">{{$data->nik}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>NISN</b></td>
+                                        <td class="pl-4">{{$data->nisn}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Nama Ibu Kandung</b></td>
+                                        <td class="pl-4">{{$data->ibu}}</td>
+                                    </tr>
+                                    <tr>
                                         <td><b>Alamat</b></td>
                                         <td class="pl-4">{{$data->alamat}}</td>
                                     </tr>
@@ -41,12 +53,16 @@
                                         <td class="pl-4">{{$data->sekolah}}</td>
                                     </tr>
                                     <tr>
-                                        <td><b>No. Telpon/WhatsApp</b></td>
+                                        <td><b>No. Telepon/WhatsApp</b></td>
                                         <td class="pl-4">{{$data->wa}}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Nama Wali</b></td>
                                         <td class="pl-4">{{$data->wali}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>No. Telepon/Whatsapp Wali</b></td>
+                                        <td class="pl-4">{{$data->wa_wali}}</td>
                                     </tr>
                                     <tr>
                                         <td><b>Markas Yang Dipilih</b></td>
@@ -65,10 +81,10 @@
                                 <li>Melakukan proses administrasi selanjutnya di markas</li>
                             </ul>
                         </div>
-                        
-        
+
+
     </div>
-    
+
 </body>
 
 </html>

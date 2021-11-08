@@ -16,6 +16,10 @@ class Pendaftar extends Model
             'wa',
             'wali',
             'foto',
-            'markas'
+            'markas',
+            'nik',
+            'nisn',
+            'ibu',
+            'wa_wali'
     ];
 }
