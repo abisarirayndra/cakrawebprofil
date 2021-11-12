@@ -9,20 +9,39 @@ use Image;
 use Illuminate\Support\Facades\Auth;
 use PDF;
 use App\Pendaftar;
+use App\Pelajar;
 
 class PendaftarController extends Controller
 {
     public function profil(){
         $user = Auth::user()->nama;
         $id = Auth::user()->id;
-        $ada = Pendaftar::where('pendaftar',$id)->first();
+        // $ada = Pendaftar::where('pendaftar',$id)->first();
+        $ada = Pelajar::where('pelajar_id',$id)->first();
+
 
         return view('pendaftar.profil', compact('user','ada'));
     }
 
     public function upFormulir(Request $request){
+        $request->validate([
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'alamat' => 'required',
+            'sekolah' => 'required',
+            'wa' => 'required',
+            'wali' => 'required',
+            'wa_wali' => 'required',
+            'foto' => 'required',
+            'markas' => 'required',
+            'nik' => 'required',
+            'nisn' => 'required',
+            'ibu' =>  'required',
+        ]);
+
         $user = Auth::user()->id;
-        $ada = Pendaftar::where('pendaftar', $user)->first();
+        // $ada = Pendaftar::where('pendaftar', $user)->first();
+        $ada = Pelajar::where('pelajar_id',$user)->first();
         if(isset($ada)){
             Alert::toast('Data Sudah Ada, Silahkan Dicetak','error');
             return redirect()->back();
@@ -33,11 +52,12 @@ class PendaftarController extends Controller
             return redirect()->back();
         }
         $image = $request->file('foto');
-        $image_name = 'Daftar'.$user.'.'.$request->file('foto')->extension();
+        $image_name = 'Pelajar'.$user.'.'.$request->file('foto')->extension();
         $path = public_path('img/pendaftar/');
 
-        Pendaftar::create([
-            'pendaftar' => $user,
+        // Pendaftar::create([
+        Pelajar::create([
+            'pelajar_id' => $user,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'alamat' => $request->alamat,
@@ -54,7 +74,8 @@ class PendaftarController extends Controller
 
         $image->move($path, $image_name);
 
-        $id = Pendaftar::where('pendaftar', $user)->first();
+        // $id = Pendaftar::where('pendaftar', $user)->first();
+        $id = Pelajar::where('pelajar_id', $user)->first();
         $user_id = $id->id;
 
         Alert::toast('Data Pendaftar Disimpan','success');
@@ -63,7 +84,8 @@ class PendaftarController extends Controller
 
     public function cetak($id){
         $user = Auth::user()->nama;
-        $data = Pendaftar::find($id);
+        // $data = Pendaftar::find($id);
+        $data = Pelajar::find($id);
 
         return view('pendaftar.cetak', compact('data','user'));
     }
@@ -71,7 +93,8 @@ class PendaftarController extends Controller
     public function cetak_pdf($id)
     {
         $user = Auth::user()->nama;
-        $pendaftar = Pendaftar::find($id);
+        // $pendaftar = Pendaftar::find($id);
+        $pendaftar = Pelajar::find($id);
         $en_foto = (string) Image::make(public_path('img/pendaftar/'. $pendaftar->foto))->encode('data-url');
         $en_logo = (string) Image::make(public_path('img/krisna.png'))->encode('data-url');
         // return $en_foto;
@@ -81,14 +104,16 @@ class PendaftarController extends Controller
 
     public function edit($id){
         $user = Auth::user()->nama;
-        $data = Pendaftar::find($id);
+        // $data = Pendaftar::find($id);
+        $data = Pelajar::find($id);
         return view('pendaftar.edit', compact('user','data'));
 
     }
 
     public function update($id, Request $request){
         $user = Auth::user()->id;
-        $data = Pendaftar::find($id);
+        // $data = Pendaftar::find($id);
+        $data = Pelajar::find($id);
 
         if($request->file('foto')){
             $size = $request->file('foto')->getSize();
@@ -100,11 +125,11 @@ class PendaftarController extends Controller
             if($data->foto && file_exists(public_path('img/pendaftar/'. $data->foto))){
                 File::delete(public_path('img/pendaftar/'. $data->foto));
             }
-            $images = 'Daftarbaru'.$id.'.'.$request->file('foto')->extension();
+            $images = 'Pelajarbaru'.$id.'.'.$request->file('foto')->extension();
             Image::make($new_photo)->save(public_path('img/pendaftar/' . $images));
 
             $data->update([
-                'pendaftar' => $user,
+                'pelajar_id' => $user,
                 'tempat_lahir' => $request->tempat_lahir,
                 'tanggal_lahir' => $request->tanggal_lahir,
                 'alamat' => $request->alamat,
@@ -121,9 +146,8 @@ class PendaftarController extends Controller
 
         }
 
-
         $data->update([
-            'pendaftar' => $user,
+                'pelajar_id' => $user,
                 'tempat_lahir' => $request->tempat_lahir,
                 'tanggal_lahir' => $request->tanggal_lahir,
                 'alamat' => $request->alamat,

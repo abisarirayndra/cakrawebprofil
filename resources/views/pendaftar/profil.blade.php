@@ -30,6 +30,15 @@
                         <a href="{{route('pendaftar.cetak', [$ada->id])}}" class="btn btn-success mt-4">Cetak</a>
                     </div>
                 @else
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form class="user" class="" action="{{route('pendaftar.upformulir')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">

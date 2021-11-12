@@ -23,6 +23,7 @@
                             </center>
                         </div>
                         <div class="row mt-4">
+                            <center>
                                 <table>
                                     <tr>
                                         <td><b>Nama</b></td>
@@ -73,6 +74,7 @@
                                         <td class="pl-4">{{\Carbon\Carbon::parse($data->created_at)->isoFormat('dddd, D MMMM Y HH:mm')}}</td>
                                     </tr>
                                 </table>
+                            </center>
                         </div>
                         <div class="mt-5">
                             <h6><i class="fas fa-hashtag text-warning"></i> Tahapan Pendaftaran</h6>
