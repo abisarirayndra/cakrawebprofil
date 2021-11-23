@@ -26,7 +26,7 @@ class DaftarController extends Controller
         }
         else{
             User::create([
-                'nama' => $nama,
+                'nama' => ucwords($nama),
                 'email' => $email,
                 'password' => Hash::make($request->password),
                 'role_id' => 5,
