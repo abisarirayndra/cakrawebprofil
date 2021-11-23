@@ -32,7 +32,7 @@ class PendaftarController extends Controller
             'wa' => 'required',
             'wali' => 'required',
             'wa_wali' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|mimes:jpg,jpeg,png',
             'markas' => 'required',
             'nik' => 'required|max:20',
             'nisn' => 'required',
