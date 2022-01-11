@@ -1,7 +1,7 @@
 @extends('master.master')
 
 @section('content')
-        
+
         <!-- Masthead-->
         <header class="head">
             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -14,7 +14,7 @@
                   <li data-target="#demo" data-slide-to="3"></li>
 
                 </ul>
-              
+
                 <!-- The slideshow -->
                 {{-- image 1100x500 --}}
                 <div class="carousel-inner">
@@ -27,7 +27,7 @@
                   </div>
                   @endforeach
                 </div>
-              
+
                 <!-- Left and right controls -->
                 <a class="carousel-control-prev" href="#demo" data-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
@@ -35,7 +35,7 @@
                 <a class="carousel-control-next" href="#demo" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
-              
+
               </div>
         </header>
         {{-- Profil --}}
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -235,7 +235,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
@@ -337,14 +337,14 @@
                     <div class="col-xl-4 col-md-4">
                         <div class="text-center">
                             <h5 class="text-white mb-4">Markas Genteng</h5>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.4598943172427!2d114.143994650333!3d-8.35633718648724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15563c88e13e5%3A0xcaca81fb9bb7f50e!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1618213528785!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <h6 class="text-warning mt-4 mb-4">Jl. KH. Wahid Hasyim, Dusun Kopen, Genteng Kulon, Kec. Genteng, Kabupaten Banyuwangi, Jawa Timur 68465</h6>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.487962736502!2d114.15612021416095!3d-8.353563186479464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15570dc5e9019%3A0x1fa9a7b8ac41efee!2sCakra%20Krisna%20Manggala%20-%20Chapter%20Genteng!5e0!3m2!1sen!2sid!4v1641861043819!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <h6 class="text-warning mt-4 mb-4">Jl. KH. Imam Bahri, Dusun Krajan, Genteng Wetan, Kec. Genteng, Kabupaten Banyuwangi, Jawa Timur 68465</h6>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4">
                         <div class="text-center">
                             <h5 class="text-white mb-4">Markas Banyuwangi</h5>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.721870971966!2d114.34270345033161!3d-8.230698784878737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15b8859685e75%3A0x9371898cde674edc!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1618213725342!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.9348089778314!2d114.34611491415934!3d-8.209311084635003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd145158da26ebd%3A0x54265ae2ce109c5c!2sCakra%20Krisna%20Manggala!5e0!3m2!1sen!2sid!4v1641861204238!5m2!1sen!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             <h6 class="text-warning mt-4 mb-4">Kebalenan, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68417</h6>
                         </div>
                     </div>
@@ -358,6 +358,6 @@
                 </div>
             </div>
         </section>
-        
-   
+
+
 @endsection
