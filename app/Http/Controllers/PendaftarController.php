@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 use File;
 use Image;
 use Illuminate\Support\Facades\Auth;
 use PDF;
 use App\Pendaftar;
 use App\Pelajar;
+use Alert;
 
 class PendaftarController extends Controller
 {

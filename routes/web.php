@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','Controller@landing')->name('welcome');
 Route::get('/kontak','Controller@kontak')->name('kontak');
-Route::get('/daftar','DaftarController@daftar')->name('daftar');
 Route::get('/dokumentasi','Controller@dokumentasi')->name('dokumentasi');
 Route::get('/alumni','Controller@alumni')->name('alumni');
 Route::get('/info','Controller@info')->name('info');
@@ -25,13 +24,7 @@ Route::get('/artikel/{id}','Controller@artikel')->name('artikel');
 Route::get('/login','AuthController@tampilLogin')->name('login');
 Route::post('/log','AuthController@login')->name('log');
 Route::get('/logout', 'AuthController@logout')->name('logout');
-Route::get('/register','DaftarController@register')->name('register');
-Route::post('/reg','DaftarController@reg')->name('reg');
-Route::get('/masuk','DaftarController@masuk')->name('masuk');
-Route::post('/upmasuk','DaftarController@upMasuk')->name('upmasuk');
-Route::get('/petunjuk','Controller@petunjuk')->name('petunjuk');
-Route::get('/lupa-password','DaftarController@lupaPass')->name('lupa-password');
-Route::post('/reset','DaftarController@reset')->name('reset');
+
 
 
 
@@ -76,12 +69,4 @@ Route::group(['middleware' => ['auth','admin-role']], function(){
     Route::get('admin/hapusinfo/{id}','KontenController@destroyInfo')->name('admin.hapusinfo');
 });
 
-Route::group(['middleware' => ['auth','pendaftar-role']], function(){
-    Route::get('pendaftar/profil','PendaftarController@profil')->name('pendaftar.profil');
-    Route::post('pendaftar/upformulir','PendaftarController@upFormulir')->name('pendaftar.upformulir');
-    Route::get('pendaftar/cetak/{id}','PendaftarController@cetak')->name('pendaftar.cetak');
-    Route::get('pendaftar/cetak_pdf/{id}','PendaftarController@cetak_pdf')->name('pendaftar.cetak_pdf');
-    Route::get('pendaftar/edit/{id}','PendaftarController@edit')->name('pendaftar.edit');
-    Route::post('pendaftar/update/{id}','PendaftarController@update')->name('pendaftar.update');
-});
 

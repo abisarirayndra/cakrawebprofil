@@ -44,10 +44,5 @@ class User extends Authenticatable
         return false;
     }
 
-    public function isPendaftar(){
-        if($this->role_id == 5){
-            return true;
-        }
-        return false;
-    }
+    
 }

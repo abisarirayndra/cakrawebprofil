@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('dokumentasi')}}">Dokumentasi</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('alumni')}}">Alumni</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('info')}}">Info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('petunjuk')}}">Pendaftaran</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://elearning.cakrakrisnamanggala.com/petunjuk-pendaftaran">Pendaftaran</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('kontak')}}">Hubungi Kami</a></li>
                     </ul>
                 </div>
