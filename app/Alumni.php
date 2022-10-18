@@ -15,5 +15,6 @@ class Alumni extends Model
         'twitter',
         'ig',
         'testi',
+        'asal_sekolah',
     ];
 }

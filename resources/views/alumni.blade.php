@@ -9,22 +9,27 @@
                 </div>
                 <div class="row">
                     @foreach ($alumni as $item)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{asset('img/alumni/'. $item->foto)}}" alt="" />
-                            <h4 class="text-warning">{{$item->nama}}</h4>
-                            <p class="text-white">{{$item->akademi}}</p>
-                            {{-- <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-warning btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                            <p class="text-white mt-3">"Proses pembelajaran yang menyenangkan dan mudah dimengerti, mentor sangat profesional"</p> --}}
-                        </div>
+                    <div class="col-xl-4 pl-3 pr-3">
+                        <center>
+                            <div class="card card-artikel" style="width: 100%;">
+                                <img class="card-img-top" src="{{asset('img/alumni/'. $item->foto)}}" alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title ">{{$item->nama}}</h5>
+                                  <h6>{{ $item->asal_sekolah }}</h6>
+                                  <p class="text-dark">{{$item->akademi}}</p>
+                                </div>
+                            </div>
+                        </center>
+
                     </div>
                     @endforeach
                 </div>
-                
+                <center class="mt-4">
+                    {{ $alumni->links() }}
+                </center>
+
             </div>
         </section>
-        
-   
+
+
 @endsection

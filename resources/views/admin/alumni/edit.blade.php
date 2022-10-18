@@ -40,6 +40,10 @@
                                 <input type="text" class="form-control" name="akademi" value="{{$alumni->akademi}}">
                             </div>
                             <div class="form-group">
+                                <label for="akademi">Asal Sekolah</label>
+                                <input type="text" class="form-control" name="asal_sekolah" value="{{$alumni->asal_sekolah}}">
+                            </div>
+                            <div class="form-group">
                                 <label for="ig">Instagram</label>
                                 <input type="text" class="form-control" name="ig" value="{{$alumni->ig}}">
                             </div>
@@ -73,7 +77,7 @@
 @section('js')
 <script type="text/javascript" src="{{asset('back/vendor/ckeditor/ckeditor.js')}}"></script>
 
-   
+
 @endsection
 
 

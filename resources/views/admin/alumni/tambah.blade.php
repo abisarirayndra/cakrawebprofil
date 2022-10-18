@@ -35,6 +35,10 @@
                                 <input type="text" class="form-control" name="akademi" required>
                             </div>
                             <div class="form-group">
+                                <label for="akademi">Asal Sekolah</label>
+                                <input type="text" class="form-control" name="asal_sekolah" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="ig">Instagram</label>
                                 <input type="text" class="form-control" name="ig">
                             </div>
@@ -68,7 +72,7 @@
 @section('js')
 <script type="text/javascript" src="{{asset('back/vendor/ckeditor/ckeditor.js')}}"></script>
 
-   
+
 @endsection
 
 

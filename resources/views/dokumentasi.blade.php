@@ -9,24 +9,25 @@
                 </div>
                 <div class="row">
                     @foreach ($dok as $item)
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <a class="portfolio-link">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content">{{$item->keterangan}}</div>
+                    <div class="col-xl-4 pl-3 pr-3">
+                        <center>
+                            <div class="card card-artikel" style="width: 100%;">
+                                <img class="card-img-top" src="{{asset('img/dok/'. $item->foto)}}" alt="Card image cap">
+                                <div class="card-body">
+                                <h6>[ {{\Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y')}} ]</h6>
+                                  <h5 class="card-title ">{{$item->keterangan}}</h5>
                                 </div>
-                                <img class="img-fluid" src="{{asset('img/dok/'. $item->foto)}}" alt="" />
-                            </a>
-                            {{-- <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                            </div> --}}
-                        </div>
+                            </div>
+                        </center>
+
                     </div>
                     @endforeach
                 </div>
+                <center class="mt-4">
+                    {{ $dok->links() }}
+                </center>
                 </div>
         </section>
-        
-   
+
+
 @endsection

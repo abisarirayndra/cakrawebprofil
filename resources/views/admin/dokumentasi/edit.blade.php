@@ -49,7 +49,7 @@
 @section('js')
 <script>
     var target=document.getElementById("area");
-    var batas_karakter=15;
+    var batas_karakter=50;
     function cek(){
         // jika jumlah karakter yg diketikkan lebih dari atau sama dengan 100
         if(target.value.length >= batas_karakter ){
@@ -57,10 +57,10 @@
         target.readOnly=true;
         //memberikan warna merah pada text pemberitahuan
         document.getElementById("notif").style.color="red";
-        // menampilkan pemberitahuan 
-        document.getElementById("notif").innerHTML="Maksimal 15 Karakter !";
+        // menampilkan pemberitahuan
+        document.getElementById("notif").innerHTML="Maksimal 50 Karakter !";
         }
-        //jika tidak 
+        //jika tidak
     else{
         //hitung jumlah karakter yg sudah diketikkan
         var jumlah_karakter=target.value.length;
@@ -71,7 +71,7 @@
         }
     }
     </script>
-   
+
 @endsection
 
 

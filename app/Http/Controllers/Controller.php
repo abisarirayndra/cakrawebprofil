@@ -25,12 +25,12 @@ class Controller extends BaseController
     }
 
     public function dokumentasi(){
-        $dok = Dokumentasi::all();
+        $dok = Dokumentasi::orderBy('id','desc')->paginate(12);
         return view('dokumentasi', compact('dok'));
     }
 
     public function alumni(){
-        $alumni = Alumni::all();
+        $alumni = Alumni::orderBy('id','desc')->paginate(12);
         return view('alumni', compact('alumni'));
     }
 

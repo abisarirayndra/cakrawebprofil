@@ -59,7 +59,7 @@ class KontenController extends Controller
         $slider->update([
             'gambar' => $images,
         ]);
-        
+
         Alert::toast('Update Gambar Berhasil', 'success');
         return redirect()->route('admin.slider');
     }
@@ -159,7 +159,7 @@ class KontenController extends Controller
             'foto' => $images,
             'keterangan' => $request->keterangan,
         ]);
-        
+
         Alert::toast('Update Dokumentasi Berhasil', 'success');
         return redirect()->route('admin.dokumentasi');
     }
@@ -197,7 +197,8 @@ class KontenController extends Controller
                 'twitter' => $request->twitter,
                 'ig' => $request->ig,
                 'testi' => $request->testi,
-                
+                'asal_sekolah' => $request->asal_sekolah,
+
             ]);
             $image->move($path, $image_name);
 
@@ -230,8 +231,10 @@ class KontenController extends Controller
                 'twitter' => $request->twitter,
                 'ig' => $request->ig,
                 'testi' => $request->testi,
+                'asal_sekolah' => $request->asal_sekolah,
+
         ]);
-        
+
         Alert::toast('Update Data Alumni Berhasil', 'success');
         return redirect()->route('admin.alumni');
     }
@@ -266,7 +269,7 @@ class KontenController extends Controller
                 'foto' => $image_name,
                 'artikel' => $request->artikel,
                 'penulis' => $penulis,
-                
+
             ]);
             $image->move($path, $image_name);
 
@@ -297,7 +300,7 @@ class KontenController extends Controller
                 'artikel' => $request->artikel,
                 'penulis' => $penulis,
         ]);
-        
+
         Alert::toast('Update Info Berhasil', 'success');
         return redirect()->route('admin.info');
     }
