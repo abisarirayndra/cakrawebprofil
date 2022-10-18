@@ -17,7 +17,8 @@ class Controller extends BaseController
 
     public function landing(){
         $slider = Slider::all();
-        return view('welcome', compact('slider'));
+        $artikel = Artikel::orderBy('id', 'desc')->take(3)->get();
+        return view('welcome', compact('slider','artikel'));
     }
     public function kontak(){
         return view('kontak');
@@ -34,7 +35,7 @@ class Controller extends BaseController
     }
 
     public function info(){
-        $artikel = Artikel::all();
+        $artikel = Artikel::orderBy('id','desc')->get();
         return view('info', compact('artikel'));
     }
 

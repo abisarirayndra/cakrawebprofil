@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 col-xs-6 mb-4">
                         <div class="text-center">
-                            <a href="{{route('artikel', [$item->id])}}"><img class="img-fluid" src="{{asset('img/info/'. $item->foto)}}" width="250" alt="" /></a>
+                            <a href="{{route('artikel', [$item->id])}}"><img class="img-fluid" src="{{asset('/img/artikel/'.$item->foto)}}" width="250" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-sm-6 col-xs-6 mb-4">
@@ -29,6 +29,6 @@
                 @endforeach
             </div>
         </section>
-        
-   
+
+
 @endsection

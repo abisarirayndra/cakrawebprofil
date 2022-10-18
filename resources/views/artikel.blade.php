@@ -16,7 +16,7 @@
                     <h3>{{$artikel->judul}}</h3>
                 </div>
                 <div class="text-center">
-                    <img src="{{asset('img/info/'. $artikel->foto)}}" width="800" alt="">
+                    <img src="{{asset('/img/artikel/'.$artikel->foto)}}" width="800" alt="">
                 </div>
                 <div class="text-justify mt-5">
                     {!!$artikel->artikel!!}
@@ -27,6 +27,6 @@
                 </div>
             </div>
         </section>
-        
-   
+
+
 @endsection
