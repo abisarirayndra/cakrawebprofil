@@ -4,7 +4,7 @@
         <section class="page-section bg-dark" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase text-warning">Dokumentasi Kegiatan</h2>
+                    <h3 class="section-heading text-uppercase text-warning">Dokumentasi Kegiatan</h3>
                     <h3 class="section-subheading text-white">Galeri kegiatan yang sudah dilalui</h3>
                 </div>
                 <div class="row">

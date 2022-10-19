@@ -35,7 +35,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
             <div class="container-fluid">
 
-                <a class="navbar-brand js-scroll-trigger" href="{{route('welcome')}}"><h6>Cakra Krisna Manggala</h6></a>
+                <a class="navbar-brand js-scroll-trigger" href="{{route('welcome')}}"><h6> <img src="{{ asset('assets/img/logos/cakra-logo.webp') }}" width="35" alt="Cakra"> Cakra Krisna Manggala</h6></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>

@@ -4,7 +4,7 @@
         <section class="page-section mt-5" id="portfolio">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-heading text-uppercase text-dark">Informasi</h2>
+                    <h3 class="section-heading text-uppercase text-dark">Informasi</h3>
                 </div>
                 @foreach ($artikel as $item)
                 <div class="row">

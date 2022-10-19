@@ -75,10 +75,11 @@
                                             <th>Nama</th>
                                             <th>Foto</th>
                                             <th>Akademi</th>
-                                            <th>FB</th>
+                                            <th>Asal Sekolah</th>
+                                            {{-- <th>FB</th>
                                             <th>Twitter</th>
                                             <th>IG</th>
-                                            <th>Testi</th>
+                                            <th>Testi</th> --}}
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -93,17 +94,18 @@
                                             <td>{{$item->nama}}</td>
                                             <td><img src="{{asset('/img/alumni/'.$item->foto)}}" alt="" width="200"></td>
                                             <td>{{$item->akademi}}</td>
-                                            <td>{{$item->fb}}</td>
+                                            <td>{{$item->asal_sekolah}}</td>
+                                            {{-- <td>{{$item->fb}}</td>
                                             <td>{{$item->twitter}}</td>
                                             <td>{{$item->ig}}</td>
-                                            <td>{!!$item->testi!!}</td>
+                                            <td>{!!$item->testi!!}</td> --}}
                                             <td>
                                                 <a href="{{route('admin.editalumni', [$item->id])}}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i>edit</a>
                                                 <a href="{{route('admin.hapusalumni', [$item->id])}}" class="btn btn-sm btn-danger" onclick="return confirm('Anda yakin ingin Menghapus ?')"><i class="fas fa-trash"></i>hapus</a>
                                             </td>
                                         </tr>
                                         @endforeach
-                                        
+
                                     </tbody>
                                 </table>
                             </div>

@@ -28,7 +28,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Keterangan</label>
-                                  <input type="text" class="form-control" onkeyup="cek()" name="keterangan" id="area" required>
+                                  <input type="text" class="form-control" name="keterangan" id="area" required>
                                   <span><div id="notif"></div></span>
                               </div>
                             <div class="form-group">
@@ -43,34 +43,6 @@
           </div>
       </div>
   </div>
-@endsection
-
-@section('js')
-<script>
-    var target=document.getElementById("area");
-    var batas_karakter=50;
-    function cek(){
-        // jika jumlah karakter yg diketikkan lebih dari atau sama dengan 100
-        if(target.value.length >= batas_karakter ){
-        //disable textarea
-        target.readOnly=true;
-        //memberikan warna merah pada text pemberitahuan
-        document.getElementById("notif").style.color="red";
-        // menampilkan pemberitahuan
-        document.getElementById("notif").innerHTML="Maksimal 50 Karakter !";
-        }
-        //jika tidak
-    else{
-        //hitung jumlah karakter yg sudah diketikkan
-        var jumlah_karakter=target.value.length;
-        // untuk mengetahui jumlah karakter yg tersisa, maka batas_karakter dikurangi karakter yg telah diketikkan
-        var sisa=batas_karakter-jumlah_karakter;
-        // tampilkan pemberitahuan berapa karakter lagi yg tersisa
-        document.getElementById("notif").innerHTML=sisa+" Karakter tersisa !";
-        }
-    }
-    </script>
-
 @endsection
 
 

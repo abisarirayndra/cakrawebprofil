@@ -4,12 +4,12 @@
         <section class="page-section bg-dark" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase text-warning">Alumni - Alumni Berprestasi</h2>
+                    <h3 class="section-heading text-uppercase text-warning">Alumni - Alumni Berprestasi</h3>
                     <h3 class="section-subheading text-white">Lembaga terpercaya, terbukti dengan lulusan yang berprestasi</h3>
                 </div>
                 <div class="row">
                     @foreach ($alumni as $item)
-                    <div class="col-xl-4 pl-3 pr-3">
+                    <div class="col-xl-4 pl-3 pr-3 pt-3 pb-3">
                         <center>
                             <div class="card card-artikel" style="width: 100%;">
                                 <img class="card-img-top" src="{{asset('img/alumni/'. $item->foto)}}" alt="Card image cap">

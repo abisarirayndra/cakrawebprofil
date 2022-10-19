@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Keterangan</label>
-                                  <input type="text" class="form-control" onkeyup="cek()" name="keterangan" id="area" value="{{$dok->keterangan}}">
+                                  <input type="text" class="form-control" name="keterangan" id="area" value="{{$dok->keterangan}}">
                                   <span><div id="notif"></div></span>
                               </div>
                             <div class="form-group">
@@ -47,7 +47,7 @@
 @endsection
 
 @section('js')
-<script>
+{{-- <script>
     var target=document.getElementById("area");
     var batas_karakter=50;
     function cek(){
@@ -70,7 +70,7 @@
         document.getElementById("notif").innerHTML=sisa+" Karakter tersisa !";
         }
     }
-    </script>
+    </script> --}}
 
 @endsection
 

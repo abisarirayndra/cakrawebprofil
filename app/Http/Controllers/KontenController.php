@@ -114,7 +114,7 @@ class KontenController extends Controller
 
     // Dokumentasi
     public function dokumentasi(){
-        $dokumentasi = Dokumentasi::all();
+        $dokumentasi = Dokumentasi::orderBy('id','desc')->get();
         $user = Auth::user()->nama;
 
         return view('admin.dokumentasi.dokumentasi', compact('dokumentasi','user'));
@@ -175,7 +175,7 @@ class KontenController extends Controller
 
     // Alumni
     public function alumni(){
-        $alumni = Alumni::all();
+        $alumni = Alumni::orderBy('id','desc')->get();
         $user = Auth::user()->nama;
 
         return view('admin.alumni.alumni', compact('alumni','user'));
