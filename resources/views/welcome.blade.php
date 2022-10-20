@@ -28,13 +28,13 @@
 @section('content')
 
         <!-- Masthead-->
-        <header class="head" style="margin-bottom: -50px">
+        <header class="head" style="margin-bottom: -40px">
               <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('assets/img/logos/bg-depan.webp') }}'); height:400px; background-size: cover;" >
                 <div class="container-fluid pt-3">
                         <img src="{{ asset('assets/img/logos/cakra-logo.webp') }}" width="100" alt="Cakra">
                         <div class="text-warning mt-2">
-                            <h3>Bimbingan Belajar</h3>
-                            <h3>Cakra Krisna Manggala</h3>
+                            <h4>Bimbingan Belajar</h4>
+                            <h4>Cakra Krisna Manggala</h4>
                         </div>
                         <div class="text-white">
                             <h5>Bimbel Persiapan Masuk TNI/POLRI dan Sekolah Kedinasan</h5>
@@ -54,11 +54,12 @@
                     <div class="col-xl-6" style="border-right: 5px solid; border-color:rgb(255, 217, 0)">
                         {{-- <img src="{{ asset('assets/img/logos/cakra-logo.webp') }}" width="200" alt="Cakra"> --}}
                         <h6 class="text-white text-left">
-                            <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> yang artinya Pemimipin yang Kuat, Cerdas dan Bijaksana dikandung maksud bagi yang mengikuti Lembaga Kursus dan Pelatihan (LKP) <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> walaupun pintar dan kuat tetapi tetap memiliki sikap dan budipekerti santun, rendah hati sehingga bisa memiliki karakter kepribadian yang bak dan bijaksana.
+                            <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> yang artinya Pemimipin yang Kuat, Cerdas dan Bijaksana dikandung maksud bagi yang mengikuti Lembaga Kursus dan Pelatihan (LKP) <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> walaupun pintar dan kuat tetapi tetap memiliki sikap dan budipekerti santun, rendah hati sehingga bisa memiliki karakter kepribadian yang baik dan bijaksana.
 
                         </h6>
                     </div>
                     <div class="col-xl-6">
+                        <h6 class="text-warning text-left">Dokumen Resmi</h6>
                         <h6 class="text-white text-left">NPSN K9997403 <br>
                             Akta Notaris No 1 Tanggal 03 Juni 2020 <br>
                             SK Kemenkumham No AHU-0005302.AH.01.07 Tahun 2020 <br>
