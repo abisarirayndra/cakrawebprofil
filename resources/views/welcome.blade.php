@@ -29,7 +29,7 @@
 
         <!-- Masthead-->
         <header class="head" style="margin-bottom: -40px">
-              <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('assets/img/logos/bg-depan.webp') }}'); height:400px; background-size: cover;" >
+              <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('assets/img/logos/bg.webp') }}'); height:400px; background-size: cover;" >
                 <div class="container-fluid pt-3">
                         <img src="{{ asset('assets/img/logos/cakra-logo.webp') }}" width="100" alt="Cakra">
                         <div class="text-warning mt-2">
@@ -51,20 +51,35 @@
                     <h3 class="section-subheading text-muted"></h3>
                 </div> --}}
                 <div class="row text-center" style="margin-top: -50px; margin-bottom: -50px">
-                    <div class="col-xl-6" style="border-right: 5px solid; border-color:rgb(255, 217, 0)">
+                    <div class="col-xl-4" style="border-right: 5px solid; border-color:rgb(255, 217, 0)">
                         {{-- <img src="{{ asset('assets/img/logos/cakra-logo.webp') }}" width="200" alt="Cakra"> --}}
                         <h6 class="text-white text-left">
                             <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> yang artinya Pemimipin yang Kuat, Cerdas dan Bijaksana dikandung maksud bagi yang mengikuti Lembaga Kursus dan Pelatihan (LKP) <div class="text-warning d-inline">CAKRA KRISNA MANGGALA</div> walaupun pintar dan kuat tetapi tetap memiliki sikap dan budipekerti santun, rendah hati sehingga bisa memiliki karakter kepribadian yang baik dan bijaksana.
 
                         </h6>
                     </div>
-                    <div class="col-xl-6">
+                    <div class="col-xl-5" style="border-right: 5px solid; border-color:rgb(255, 217, 0)">
                         <h6 class="text-warning text-left">Dokumen Resmi</h6>
                         <h6 class="text-white text-left">NPSN K9997403 <br>
                             Akta Notaris No 1 Tanggal 03 Juni 2020 <br>
                             SK Kemenkumham No AHU-0005302.AH.01.07 Tahun 2020 <br>
                             Ijin Operasional LKP Satuan Non Formal No. 421.9/3114/429.101/2021 <br>
                         </h6>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="h6 text-warning text-left mb-4">Media Sosial</div>
+                        <div class="text-left">
+                            <a class="btn btn-primary" style="background-color: #ac2bac;" href="https://instagram.com/cakrakrisnamanggala?utm_medium=copy_link" role="button"
+                            ><i class="fab fa-instagram"></i
+                            ></a>
+                            <a class="btn btn-primary" style="background-color: #ed302f;" href="https://www.youtube.com/channel/UC2qFrrXJs4zMZtQEap6ij9w" role="button"
+                            ><i class="fab fa-youtube"></i
+                            ></a>
+                            <!-- Github -->
+                            <a class="btn btn-primary" style="background-color: #333333;" href="https://vt.tiktok.com/ZSJuy6HjK/" role="button"
+                            ><i class="fab fa-tiktok"></i></a>
+                        </div>
+
                     </div>
                 </div>
             </div>
